@@ -1,11 +1,9 @@
 import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-row">
-      <div>
-        
-      </div>
-    </main>
-  )
+  return (<>
+    <div className="w-full h-80">
+      Block
+    </div>
+  </>)
 }

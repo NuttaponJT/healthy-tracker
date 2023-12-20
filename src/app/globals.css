@@ -6,6 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --grey-border-color: 209, 209, 209;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #888;
+  --scrollbar-thumb-hover: #555;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +20,22 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover); 
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +44,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.left-nav-menu-bar {
+  border-width: 0 .1rem 0 0;
+  border-color: rgb(var(--grey-border-color));
+  padding: 1rem;
 }
